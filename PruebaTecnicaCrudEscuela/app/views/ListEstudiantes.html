@@ -1,0 +1,51 @@
+﻿<a class="btn btn-outline-secondary" href="#/"><i class="fa fa-arrow-left"></i>  Inicio</a>
+<div class="container" ng-init="find()">
+    <div class="row">
+        <div class="col-md-6"><div><h1>Lista de estudiantes</h1></div></div>
+        <div class="col-md-6"><a style="cursor:pointer" class="btn btn-block btn-primary" href="#/estudiantes/create">Agregar nuevo <i class="fa fa-plus-circle"></i></a></div>
+    </div>
+
+    <table class="table table-hover table-responsive-md">
+        <thead class="table-default">
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Primer Apellido</th>
+                <th scope="col">Segundo Apellido</th>
+                <th scope="col">Edad</th>
+                <th scope="col" style="text-align:center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="estudiante in estudiantes">
+                <th scope="row"><a ng-href="{{url2}}" style="color:black">{{estudiante.Estudiante_id}}</a></th>
+                <td>{{estudiante.Nombre}}</td>
+                <td>{{estudiante.Primer_apellido}}</td>
+                <td>{{estudiante.Segundo_apellido}}</td>
+                <td>{{estudiante.Edad}}</td>
+                <td style="text-align:center">
+                    <div class="btn-group">
+                        <p style="display: none">{{url1 = '#/estudiantes/edit/' + estudiante.Estudiante_id}}</p>
+                        <a class="btn btn-outline-primary" ng-href="{{url1}}"><i class="fa fa-pencil-square-o"></i>Editar</a>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <p style="display: none">{{url2 = '#/estudiantes/' + estudiante.Estudiante_id}}</p>
+                            <a class="dropdown-item" ng-href="{{url2}}" style="text-align: center">Detalles <i class="fa fa-info"></i></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#/estudiantes" ng-click="delete(estudiante)" style="text-align: center">Eliminar   <i class="fa fa-remove"></i></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr ng-show="!estudiantes">
+                <th colspan="6" style="text-align: center">
+                    Aún no hay estudiantes registrados.
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

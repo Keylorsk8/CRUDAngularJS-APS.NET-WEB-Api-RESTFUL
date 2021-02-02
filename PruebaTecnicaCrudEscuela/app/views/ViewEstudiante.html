@@ -1,0 +1,26 @@
+﻿<a class="btn btn-outline-secondary" href="#/estudiantes"><i class="fa fa-arrow-left"></i>   Estudiantes</a>
+<div class="container" ng-init="findOne()">
+    <h1>Estudiante No. {{estudiante.Estudiante_id}}</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img style="width: 100%" src="../../Content/img/perfil.jpg" />
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Número de Identificación</label>
+                <input ng-model="estudiante.Estudiante_id" id="EstudianteIdView" class="form-control" disabled="disabled" />
+                <label>Nombre</label>
+                <input ng-model="estudiante.Nombre" id="EstudianteNombreView" class="form-control" disabled="disabled" />
+                <label>Primer Apellido</label>
+                <input ng-model="estudiante.Primer_apellido" id="EstudiantePAView" class="form-control" disabled="disabled" />
+                <label>Segundo Apellido</label>
+                <input ng-model="estudiante.Segundo_apellido" id="EstudianteSAView" class="form-control" disabled="disabled" />
+                <label>Edad</label>
+                <input ng-model="estudiante.Edad" id="EstudianteEdadView" class="form-control" disabled="disabled" />
+                <hr />
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+﻿<a class="btn btn-outline-secondary" href="#/estudiantes"><i class="fa fa-arrow-left"></i>  Estudiantes</a>
+<div class="container" ng-init="findOne()">
+    <h1>Editar</h1>
+
+    <div ng-show="error">
+        <strong ng-bind="error"></strong>
+    </div>
+
+    <form ng-submit="update()">
+        <div class="form-group">
+            <input ng-model="estudiante.Estudiante_id" disabled="disabled" style="display:none" />
+            <label>Nombre</label>
+            <input ng-model="estudiante.Nombre" required="required" class="form-control" />
+            <label>Primer Apellido</label>
+            <input ng-model="estudiante.Primer_apellido" required="required" class="form-control" />
+            <label>Segundo Apellido</label>
+            <input ng-model="estudiante.Segundo_apellido" required="required" class="form-control" />
+            <label>Edad</label>
+            <input ng-model="estudiante.Edad" type="number" min="1" max="150" required="required" class="form-control" />
+            <hr />
+            <input type="submit" value="Editar Estudiante" class="form-control btn btn-primary" />
+        </div>
+    </form>
+</div>

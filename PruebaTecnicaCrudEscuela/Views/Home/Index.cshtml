@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html ng-app="EscuelaApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <!--JS-->
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/toastr.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <!--CSS-->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/app/css/styles.css" rel="stylesheet" />
+    <!--Angular-->
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/angular-animate.min.js"></script>
+    <script src="~/app/js/app.js"></script>
+    <!--Services-->
+    <script src="~/app/js/services/estudianteservice.js"></script>
+    <!--Controller-->
+    <script src="~/app/js/controllers/estudiantecontroller.js"></script>
+    <script src="~/app/js/controllers/homecontroller.js"></script>
+    <title>Escuela CRUD</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#/">Escuela CRUD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#/estudiantes">
+                        Estudiantes
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div ng-view class="container-fluid" id="DivNgView"></div>
+</body>
+</html>

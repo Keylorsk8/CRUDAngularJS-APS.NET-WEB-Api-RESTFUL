@@ -1,0 +1,24 @@
+﻿<a class="btn btn-outline-secondary" href="#/estudiantes"><i class="fa fa-arrow-left"></i>  Estudiantes</a>
+<div class="container">
+    <h1>Crear Nuevo</h1>
+
+    <div ng-show="error">
+        <strong ng-bind="error"></strong>
+    </div>
+
+    <form ng-submit="create()">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input ng-model="estudiante.Nombre" required="required" id="NombreCreate" class="form-control" />
+            <label>Primer Apellido</label>
+            <input ng-model="estudiante.Primer_apellido" required="required" id="APCreate" class="form-control" />
+            <label>Segundo Apellido</label>
+            <input ng-model="estudiante.Segundo_apellido" required="required" id="SPCreate" class="form-control" />
+            <label>Edad</label>
+            <input ng-model="estudiante.Edad" id="ECreate" type="number" min="1" max="150" required="required" class="form-control" />
+            <hr />
+            <input type="submit" value="Guardar" class="form-control btn btn-primary" />
+        </div>
+    </form>
+</div>
+
